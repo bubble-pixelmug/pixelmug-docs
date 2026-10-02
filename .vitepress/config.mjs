@@ -1,14 +1,13 @@
+import { readFileSync } from 'node:fs';
+import { dirname, resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { defineConfig } from 'vitepress';
 const deviceModules = [
   ['runtime', 'MPY 运行基础'],
   ['network', 'Network'], ['micropyxel', 'MicroPyxel'], ['audio', 'Audio Service'], ['prompt-sound', '提示音播放器'],
   ['g-sensor', 'G-sensor'], ['button', 'Touch'], ['dust', 'Dust'],
 ];
-export default defineConfig({
-  lang: 'zh-CN', title: 'PixelMug 开发文档',
-  description: '冒泡智能体、Bot、WebApp 与 PixelMug 设备开发文档',
-  srcExclude: ['README.md'],
-  themeConfig: {
+const zhTheme = {
     nav: [{ text: '快速了解', link: '/overview/' }, { text: '开始开发', link: '/getting-started/' }, { text: 'Studio', link: '/studio/' }, { text: '更新记录', link: '/changelog/' }],
     sidebar: [
       { text: '开发指南', items: [
@@ -120,6 +119,77 @@ export default defineConfig({
     outline: { label: '本页目录', level: [2,3] },
     docFooter: { prev: '上一页', next: '下一页' },
     sidebarMenuLabel: '文档目录', returnToTopLabel: '回到顶部', darkModeSwitchLabel: '切换主题',
+};
+
+const docsRoot = resolve(dirname(fileURLToPath(import.meta.url)), '..');
+const enGroupLabels = new Map([
+  ['开发指南', 'Developer guide'],
+  ['SDK 与接口', 'SDKs and APIs'],
+  ['应用框架与入门', 'Framework and getting started'],
+  ['对话交互', 'Chat interaction'],
+  ['关联与调用设备', 'Linking and controlling devices'],
+  ['帮助与更新', 'Help and updates'],
+]);
+
+function englishPageTitle(link, fallback) {
+  const relative = link === '/'
+    ? 'index.md'
+    : link.endsWith('/')
+      ? `${link.slice(1)}index.md`
+      : `${link.slice(1)}.md`;
+  try {
+    const markdown = readFileSync(resolve(docsRoot, 'en', relative), 'utf8');
+    return markdown.match(/^#\s+(.+)$/m)?.[1]?.replace(/\s+\{#[^}]+\}\s*$/, '') || fallback;
+  } catch {
+    return fallback;
+  }
+}
+
+function englishItems(items) {
+  return items.map((item) => {
+    const link = item.link
+      ? item.link === '/' ? '/en/' : `/en${item.link}`
+      : undefined;
+    return {
+      ...item,
+      text: item.link
+        ? englishPageTitle(item.link, item.text)
+        : enGroupLabels.get(item.text) || item.text,
+      ...(link ? { link } : {}),
+      ...(item.items ? { items: englishItems(item.items) } : {}),
+    };
+  });
+}
+
+const enTheme = {
+  nav: englishItems(zhTheme.nav),
+  sidebar: englishItems(zhTheme.sidebar),
+  search: { provider: 'local' },
+  outline: { label: 'On this page', level: [2, 3] },
+  docFooter: { prev: 'Previous page', next: 'Next page' },
+  sidebarMenuLabel: 'Documentation menu',
+  returnToTopLabel: 'Return to top',
+  darkModeSwitchLabel: 'Switch theme',
+};
+
+export default defineConfig({
+  srcExclude: ['README.md'],
+  locales: {
+    root: {
+      label: '简体中文',
+      lang: 'zh-CN',
+      title: 'PixelMug 开发文档',
+      description: '冒泡智能体、Bot、WebApp 与 PixelMug 设备开发文档',
+      themeConfig: zhTheme,
+    },
+    en: {
+      label: 'English',
+      lang: 'en-US',
+      link: '/en/',
+      title: 'PixelMug Developer Documentation',
+      description: 'Developer documentation for Bubble agents, Bots, WebApps, and PixelMug devices',
+      themeConfig: enTheme,
+    },
   },
   vite: {
     server: { headers: { 'Content-Security-Policy': "frame-ancestors 'self' http://127.0.0.1:* http://localhost:*" } },
