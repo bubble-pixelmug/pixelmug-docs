@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 760" role="img" aria-labelledby="title desc">
+  <title id="title">Bubble 应用与设备整体架构</title>
+  <desc id="desc">用户在 Bubble App 中通过对话或 WebApp 使用应用。Bot 处理业务与用户设备关系。Bot 和 WebApp 分别与设备 TAL 交互，WebApp 还可使用 BLE。S1 Pro 和 Lite 可运行 MPY 应用，P1 不支持此容器。</desc>
+  <defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10" fill="none" stroke="#587697" stroke-width="1.8"/></marker></defs>
+  <rect width="800" height="760" rx="20" fill="#f6f9fe"/>
+  <g font-family="system-ui, 'Microsoft YaHei', sans-serif" fill="#193b64">
+    <rect x="20" y="30" width="320" height="320" rx="18" fill="#edf5ff" stroke="#a4c5ee"/>
+    <text x="45" y="68" font-size="24" font-weight="700">用户 · Bubble App</text>
+    <rect x="45" y="95" width="270" height="78" rx="12" fill="white"/>
+    <text x="65" y="126" font-size="21" font-weight="600">对话</text><text x="65" y="153" font-size="18">发消息、收通知、关联设备</text>
+    <rect x="45" y="220" width="270" height="102" rx="12" fill="white"/>
+    <text x="65" y="254" font-size="21" font-weight="600">WebApp</text><text x="65" y="284" font-size="18">按钮、滑块、画布、控制面板</text>
+    <rect x="465" y="30" width="315" height="143" rx="18" fill="#eef9f2" stroke="#a3d4b1"/>
+    <text x="487" y="68" font-size="24" font-weight="700">Bot · 应用逻辑</text><text x="487" y="102" font-size="18">理解操作意图、组织业务流程</text><text x="487" y="131" font-size="18">联系用户、关联设备、处理事件</text><text x="487" y="155" font-size="16" fill="#587697">运行在开发电脑或服务器</text>
+
+
+    <rect x="20" y="500" width="760" height="248" rx="18" fill="white" stroke="#a4c5ee"/>
+    <text x="45" y="540" font-size="24" font-weight="700">PixelMug 设备</text>
+    <rect x="45" y="565" width="320" height="151" rx="12" fill="#fff5e9"/>
+    <text x="65" y="600" font-size="22" font-weight="600">MPY 应用容器</text><text x="65" y="632" font-size="18">开发者代码 + 设备组件</text><text x="65" y="657" font-size="18"><tspan x="65">扩展显示渲染、语音、运动、</tspan><tspan x="65" dy="24">触摸、WiFi/BLE能力</tspan></text><text x="65" y="705" font-size="16" fill="#795b37">仅 PixelMug S1系列</text>
+    <rect x="390" y="565" width="365" height="151" rx="12" fill="#edf5ff"/>
+    <text x="410" y="600" font-size="22" font-weight="600">TAL · 设备接口抽象</text><text x="410" y="632" font-size="18">固件提供的方法与事件</text><text x="410" y="662" font-size="18">TALID 标识一组设备接口</text><text x="410" y="696" font-size="16" fill="#587697">例如 PixelMug、PixelMugS1</text>
+    <g fill="none" stroke="#587697" stroke-width="2" marker-start="url(#arrow)" marker-end="url(#arrow)">
+      <path d="M320 123H459"/><path d="M320 231L459 163"/><path d="M320 295H415Q440 295 440 320V557"/>
+      <path d="M620 180V557"/><path d="M175 358V491" stroke-dasharray="7 6"/>
+    </g>
+    <g font-size="16" fill="#416487">
+      <text x="362" y="112">消息</text><text x="344" y="192">业务请求 / 推送</text><text x="356" y="284">设备 RPC</text>
+      <text x="633" y="355">设备 RPC</text><text x="633" y="380">设备事件</text>
+      <text x="38" y="385"><tspan x="38">BLE（仅PixelMug</tspan><tspan x="38" dy="24">S1 系列）</tspan></text><text x="38" y="434">近距离交互</text>
+    </g>
+
+  </g>
+</svg>
