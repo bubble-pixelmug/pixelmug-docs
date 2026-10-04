@@ -17,7 +17,7 @@
     <rect x="20" y="500" width="760" height="248" rx="18" fill="white" stroke="#a4c5ee"/>
     <text x="45" y="540" font-size="24" font-weight="700">PixelMug devices</text>
     <rect x="45" y="565" width="320" height="151" rx="12" fill="#fff5e9"/>
-    <text x="65" y="600" font-size="20" font-weight="600">MPY application container</text><text x="65" y="632" font-size="16">Developer code + device components</text><text x="65" y="657" font-size="16"><tspan x="65">Extend display, audio, and motion,</tspan><tspan x="65" dy="24">touch, and Wi-Fi/BLE capabilities</tspan></text><text x="65" y="705" font-size="15" fill="#795b37">PixelMug S1 series only</text>
+    <text x="65" y="600" font-size="20" font-weight="600">MPY application container</text><text x="65" y="632" font-size="16">Developer's MicroPython code</text><text x="65" y="657" font-size="16"><tspan x="65">Extend display, audio, and motion,</tspan><tspan x="65" dy="24">touch, and Wi-Fi/BLE capabilities</tspan></text><text x="65" y="705" font-size="15" fill="#795b37">PixelMug S1 series only</text>
     <rect x="390" y="565" width="365" height="151" rx="12" fill="#edf5ff"/>
     <text x="410" y="600" font-size="20" font-weight="600">TAL · Things abstraction layer</text><text x="410" y="632" font-size="16">Firmware-provided methods and events</text><text x="410" y="662" font-size="16">TALID identifies an interface set</text><text x="410" y="696" font-size="15" fill="#587697">For example, PixelMug and PixelMugS1</text>
     <g fill="none" stroke="#587697" stroke-width="2" marker-start="url(#arrow)" marker-end="url(#arrow)">
