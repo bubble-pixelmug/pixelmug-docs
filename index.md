@@ -1,8 +1,7 @@
 ---
 layout: home
 hero:
-  name: PixelMug 开发文档
-  text: 让每一个灵感，在 PixelMug 上运行
+  name: 让每一个灵感，在 PixelMug 上运行
   tagline: 从冒泡智能体到真实设备，逐步构建你的应用。
   actions:
     - theme: brand
