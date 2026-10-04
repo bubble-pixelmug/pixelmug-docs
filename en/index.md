@@ -2,9 +2,6 @@
 layout: home
 hero:
   name: Bring every idea to life on PixelMug
-  text: |-
-    What if your next computer
-    were a mug?
   tagline: Build your application step by step, from a Bubble agent to a physical device.
   actions:
     - theme: brand
