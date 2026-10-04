@@ -132,6 +132,7 @@ const enGroupLabels = new Map([
 ]);
 
 function englishPageTitle(link, fallback) {
+  if (link === '/') return 'Home';
   const relative = link === '/'
     ? 'index.md'
     : link.endsWith('/')
