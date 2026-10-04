@@ -163,6 +163,7 @@ function englishItems(items) {
 }
 
 const enTheme = {
+  siteTitle: 'PixelMug Docs',
   nav: englishItems(zhTheme.nav),
   sidebar: englishItems(zhTheme.sidebar),
   search: { provider: 'local' },
