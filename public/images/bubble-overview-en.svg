@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 760" role="img" aria-labelledby="title desc">
+  <title id="title">Bubble application and device architecture</title>
+  <desc id="desc">Users access applications in the Bubble App through chat or WebApps. Bots handle business logic and user-device relationships. Bots and WebApps interact with device TAL interfaces; WebApps can also use BLE. PixelMug S1 Pro and Lite can run MPY applications; P1 does not support the MPY container.</desc>
+  <defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10" fill="none" stroke="#587697" stroke-width="1.8"/></marker></defs>
+  <rect width="800" height="760" rx="20" fill="#f6f9fe"/>
+  <g font-family="system-ui, 'Microsoft YaHei', sans-serif" fill="#193b64">
+    <rect x="20" y="30" width="320" height="320" rx="18" fill="#edf5ff" stroke="#a4c5ee"/>
+    <text x="45" y="68" font-size="24" font-weight="700">User · Bubble App</text>
+    <rect x="45" y="95" width="270" height="78" rx="12" fill="white"/>
+    <text x="65" y="126" font-size="21" font-weight="600">Chat</text><text x="65" y="153" font-size="14">Messages, notifications, device linking</text>
+    <rect x="45" y="220" width="270" height="102" rx="12" fill="white"/>
+    <text x="65" y="254" font-size="21" font-weight="600">WebApp</text><text x="65" y="284" font-size="14">Buttons, sliders, canvas, control panels</text>
+    <rect x="465" y="30" width="315" height="143" rx="18" fill="#eef9f2" stroke="#a3d4b1"/>
+    <text x="487" y="68" font-size="22" font-weight="700">Bot · Application logic</text><text x="487" y="102" font-size="15">Interpret intent and orchestrate workflows</text><text x="487" y="131" font-size="15">Connect users and devices; handle events</text><text x="487" y="155" font-size="13" fill="#587697">Runs on a developer computer or server</text>
+
+
+    <rect x="20" y="500" width="760" height="248" rx="18" fill="white" stroke="#a4c5ee"/>
+    <text x="45" y="540" font-size="24" font-weight="700">PixelMug devices</text>
+    <rect x="45" y="565" width="320" height="151" rx="12" fill="#fff5e9"/>
+    <text x="65" y="600" font-size="20" font-weight="600">MPY application container</text><text x="65" y="632" font-size="16">Developer code + device components</text><text x="65" y="657" font-size="16"><tspan x="65">Extend display, audio, and motion,</tspan><tspan x="65" dy="24">touch, and Wi-Fi/BLE capabilities</tspan></text><text x="65" y="705" font-size="15" fill="#795b37">PixelMug S1 series only</text>
+    <rect x="390" y="565" width="365" height="151" rx="12" fill="#edf5ff"/>
+    <text x="410" y="600" font-size="20" font-weight="600">TAL · Device interface abstraction</text><text x="410" y="632" font-size="16">Firmware-provided methods and events</text><text x="410" y="662" font-size="16">TALID identifies an interface set</text><text x="410" y="696" font-size="15" fill="#587697">For example, PixelMug and PixelMugS1</text>
+    <g fill="none" stroke="#587697" stroke-width="2" marker-start="url(#arrow)" marker-end="url(#arrow)">
+      <path d="M320 123H459"/><path d="M320 231L459 163"/><path d="M320 295H415Q440 295 440 320V557"/>
+      <path d="M620 180V557"/><path d="M175 358V491" stroke-dasharray="7 6"/>
+    </g>
+    <g font-size="16" fill="#416487">
+      <text x="362" y="112">Messages</text><text x="344" y="192" font-size="14">Business requests / updates</text><text x="356" y="284">Device RPC</text>
+      <text x="633" y="355">Device RPC</text><text x="633" y="380">Device events</text>
+      <text x="38" y="385"><tspan x="38">BLE (PixelMug</tspan><tspan x="38" dy="24">S1 series only)</tspan></text><text x="38" y="434">Short-range interaction</text>
+    </g>
+
+  </g>
+</svg>

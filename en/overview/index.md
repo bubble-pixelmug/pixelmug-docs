@@ -8,7 +8,7 @@ You can combine these capabilities gradually. A Bot that only sends and receives
 
 ## Overall architecture
 
-![The logical relationship among the Bubble App, Bot, and device: the Bot and WebApp connect to TAL, and the WebApp can also communicate with the device over BLE](/images/bubble-overview.svg)
+![The logical relationship among the Bubble App, Bot, and device: the Bot and WebApp connect to TAL, and the WebApp can also communicate with the device over BLE](/images/bubble-overview-en.svg)
 
 Both Bots and WebApps can interact with devices through the RPC service provided by Bubble. BLE gives WebApps another channel between the phone and a nearby device.
 
