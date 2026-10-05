@@ -175,6 +175,7 @@ const enTheme = {
 };
 
 export default defineConfig({
+  base: process.env.DOCS_BASE || '/',
   srcExclude: ['README.md'],
   locales: {
     root: {
