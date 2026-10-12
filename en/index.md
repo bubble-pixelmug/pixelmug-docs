@@ -1,8 +1,8 @@
 ---
 layout: home
 hero:
-  name: Bring every idea to life on PixelMug
-  tagline: Build your application step by step, from a Bubble agent to a physical device.
+  name: Bring Every Idea to Life on PixelMug
+  tagline: From Bubble bots to on-device applications, build your own experiences.
   actions:
     - theme: brand
       text: Explore PixelMug
