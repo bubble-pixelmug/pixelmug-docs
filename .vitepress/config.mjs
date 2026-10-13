@@ -8,7 +8,7 @@ const deviceModules = [
   ['g-sensor', 'G-sensor'], ['button', 'Touch'], ['dust', 'Dust'],
 ];
 const zhTheme = {
-    nav: [{ text: '快速了解', link: '/overview/' }, { text: '开始开发', link: '/getting-started/' }, { text: 'Studio', link: '/studio/' }, { text: '更新记录', link: '/changelog/' }],
+    nav: [{ text: '快速了解', link: '/overview/' }, { text: '立刻体验', link: '/getting-started/' }, { text: 'Studio', link: '/studio/' }, { text: '更新记录', link: '/changelog/' }],
     sidebar: [
       { text: '开发指南', items: [
         { text: '文档首页', link: '/' }, { text: '快速了解', link: '/overview/' },

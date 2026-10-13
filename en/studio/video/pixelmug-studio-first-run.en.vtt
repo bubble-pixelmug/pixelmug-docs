@@ -1,0 +1,34 @@
+WEBVTT
+
+00:00.000 --> 00:12.000
+PixelMug Studio is the local workspace for running a Bot, serving a WebApp,
+deploying MicroPython, and reading logs.
+
+00:12.000 --> 00:28.000
+Sign in with the Bubble account that owns your test Bot and PixelMug.
+
+00:28.000 --> 00:47.000
+My Bubble shows account devices and Bots. Tokens stay only for this Studio session.
+
+00:47.000 --> 01:10.000
+Choose the project root, Bot, phone-reachable WebApp address,
+and automatic device code.
+
+01:10.000 --> 01:27.000
+Start the agent, then link a compatible device.
+Account ownership alone is not a Bot binding.
+
+01:27.000 --> 01:50.000
+Studio uploads the contents of mpy and runs the main program
+on the linked PixelMug.
+
+01:50.000 --> 02:10.000
+Green paths show active state. WebApp and MPY paths appear
+as those services become ready.
+
+02:10.000 --> 02:31.000
+Use Bot, WebApp, and device logs to find the failing layer.
+
+02:31.000 --> 02:40.000
+Update one device for MPY-only changes.
+Stop the agent before changing settings.

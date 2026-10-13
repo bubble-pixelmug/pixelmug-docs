@@ -1,10 +1,11 @@
-# 01 Interact with PixelMug through chat
+# 01. Interact with PixelMug through chat
 
-To Bot, "Hello," PixelMug, "Hello," "Bot," and then "Cup: Hello." This example... [Quick Understanding](/en/overview/) In the middle of this, "chat hoo Bot hoo hoo hoo hoo hoo hoo hoo hoo hoo hoo hoo hoo hoo hoo hoo hoo.
+Send “Hello” to the Bot, PixelMug displays “Hello”, and the Bot replies, “The mug got it: Hello.”
+This example turns the “Chat → Bot → Device” flow introduced in [Overview](/en/overview/) into a hands-on interaction you can try yourself.
 
 This example supports the PixelMug P1 and S1 series.
-
-Item location: `getting-started/01-chat`. The application logic is all in `bot/index.js`; no WebApp is available and MPY is not required in this example.
+All application logic is in bot/index.js. This example does not use a WebApp and does not require MPY.
+ 
 
 ## I. Run the example in Studio
 
